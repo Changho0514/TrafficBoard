@@ -20,7 +20,11 @@ public class UserDTO {
     private Status status;
     private Date updateTime;
 
-    public enum Status {
+	public static boolean hasNullDataBeforeRegister(UserDTO userDto) {
+		return userDto.getUserId() == null || userDto.getPassword() == null || userDto.getNickName() == null;
+	}
+
+	public enum Status {
         DEFAULT, ADMIN, DELETED
     }
 }
