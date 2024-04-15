@@ -8,6 +8,7 @@ import org.apache.ibatis.annotations.Param;
 public interface UserProfileMapper {
 
     public UserDTO getUserProfile(@Param("id") String id);
+    public int register(UserDTO userDTO);
 
     int insertUserProfile(
         @Param("id") String id,
