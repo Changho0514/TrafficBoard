@@ -1,5 +1,5 @@
-# Board-Server
-[패스트캠퍼스] 대용량 트래픽 게시판 프로젝트
+# TrafficBoard
+대용량 트래픽 게시판 프로젝트
 
 ---
 # 목적
@@ -55,7 +55,7 @@
 ---
 # 시퀀스
 - 게시글 등록 시퀀스
-![패캠  게시글 등록 시퀀스](https://github.com/ccommit-dev/Board-Server/assets/77635521/7791db61-97cc-4ad8-a90c-2e0a572049c5)
+![게시글 등록 시퀀스](https://github.com/ccommit-dev/Board-Server/assets/77635521/7791db61-97cc-4ad8-a90c-2e0a572049c5)
 
 - 게시글 검색 시퀀스
 ![게시글 검색 시퀀스](https://github.com/ccommit-dev/Board-Server/assets/77635521/c5f228fd-ca8f-4144-a407-30e2647f9159)
