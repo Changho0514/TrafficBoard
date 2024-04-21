@@ -3,20 +3,20 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.study.boardserver.mapper.UserProfileMapper">
+<mapper namespace="com.fastcampus.boardserver.mapper.UserProfileMapper">
 
-    <select id="getUserProfile" resultType="com.study.boardserver.dto.UserDTO">
+    <select id="getUserProfile" resultType="com.fastcampus.boardserver.dto.UserDTO">
         SELECT id, userId, password, nickName, createTime, isWithDraw, status
         FROM user
         WHERE id = #{id}
     </select>
 
-    <insert id="insertUserProfile" parameterType="com.study.boardserver.dto.UserDTO">
+    <insert id="insertUserProfile" parameterType="com.fastcampus.boardserver.dto.UserDTO">
         INSERT INTO user (userId, passWord, nickName, isWithDraw, status, isAdmin)
         VALUES (#{userId}, #{password}, #{nickName}, #{isWithDraw}, #{status}, #{isAdmin})
     </insert>
 
-    <update id="updateUserProfile" parameterType="com.study.boardserver.dto.UserDTO">
+    <update id="updateUserProfile" parameterType="com.fastcampus.boardserver.dto.UserDTO">
         UPDATE user
         SET password=#{password},
             nickName=#{nickName},
@@ -31,12 +31,12 @@
         WHERE userId = #{id}
     </delete>
 
-    <insert id="register" parameterType="com.study.boardserver.dto.UserDTO">
+    <insert id="register" parameterType="com.fastcampus.boardserver.dto.UserDTO">
         INSERT INTO user (userId, passWord, nickName, createTime, isWithDraw, status)
         VALUES (#{userId}, #{password}, #{nickName}, #{createTime}, #{isWithDraw}, #{status})
     </insert>
 
-    <select id="findByIdAndPassword" resultType="com.study.boardserver.dto.UserDTO">
+    <select id="findByIdAndPassword" resultType="com.fastcampus.boardserver.dto.UserDTO">
         SELECT id,
                userId,
                passWord,
@@ -50,7 +50,7 @@
           AND status != 'DELETE'
     </select>
 
-    <select id="findByUserIdAndPassword" resultType="com.study.boardserver.dto.UserDTO">
+    <select id="findByUserIdAndPassword" resultType="com.fastcampus.boardserver.dto.UserDTO">
         SELECT id,
                userId,
                passWord,
@@ -70,7 +70,7 @@
         WHERE userId = #{userId}
     </select>
 
-    <update id="updatePassword" parameterType="com.study.boardserver.dto.UserDTO">
+    <update id="updatePassword" parameterType="com.fastcampus.boardserver.dto.UserDTO">
         UPDATE user
         SET passWord = #{password}
         WHERE userId = #{userId}
